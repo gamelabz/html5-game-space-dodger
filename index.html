@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="🚀 Space Dodger — a modern, dependency-free HTML5 arcade survival game. Dodge endless meteors and beat your best score." />
+  <meta name="theme-color" content="#05060f" />
+  <title>🚀 Space Dodger</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <canvas id="game"></canvas>
+
+    <!-- Glassmorphism HUD -->
+    <div class="hud" id="hud">
+      <div class="card">
+        <span class="card-label">Score</span>
+        <span id="score" class="card-value">0</span>
+      </div>
+      <div class="card">
+        <span class="card-label">Time</span>
+        <span id="time" class="card-value">0.0s</span>
+      </div>
+      <div class="card">
+        <span class="card-label">Best</span>
+        <span id="best" class="card-value">0</span>
+      </div>
+    </div>
+
+    <!-- Overlay (menu / game over) -->
+    <div class="overlay" id="overlay">
+      <div class="panel">
+        <div class="rocket" id="rocket" aria-hidden="true">🚀</div>
+        <h1 id="overlay-title" class="gradient-text">Space Dodger</h1>
+        <p id="overlay-text" class="subtext">
+          Pilot your glowing ship through an endless meteor storm.
+          The longer you survive, the higher you score.
+        </p>
+
+        <div id="stats" class="stats hidden">
+          <div class="stat">
+            <span class="stat-label">Score</span>
+            <span id="final-score" class="stat-value">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Best</span>
+            <span id="final-best" class="stat-value">0</span>
+          </div>
+        </div>
+
+        <div id="new-best" class="new-best hidden">🏆 New Best!</div>
+
+        <button id="play-btn" class="btn" type="button">Play</button>
+
+        <p class="hint">
+          Move: <b>◀ ▶</b> / <b>A D</b> / <b>Mouse</b> &nbsp;·&nbsp; Start &amp; Restart: <b>Space</b>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
