@@ -28,11 +28,18 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    env:
+      # configure-pages@v5 targets Node 20, which is now deprecated/blocked on
+      # runners (Node 24 by default). Allow it to run on Node 20 so it works.
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          # Auto-enable Pages (source: GitHub Actions) on first run.
+          enablement: force
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
