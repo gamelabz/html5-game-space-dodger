@@ -1,69 +1,25 @@
-# Design Prompt — 🚀 Space Dodger
+# Space Dodger — Game Prompt
 
-## One-Page Game Design
-
-**Project:** Space Dodger
-**Type:** Endless arcade survival game
-**Platform:** Browser (HTML5 Canvas, vanilla JavaScript, no dependencies)
-**Audience:** Casual players who enjoy quick, replayable high-score chases.
-
----
+Build a modern, dependency-free HTML5 Canvas game called **Space Dodger**.
 
 ## Concept
+Pilot your ship through an endless asteroid field, weaving past hazards to last as long as possible.
 
-Space Dodger drops the player into deep space at the controls of a small,
-glowing fighter ship. Meteors rain down endlessly from the top of the screen and
-the player must dodge them for as long as possible. Survival time is the score;
-the longer you last, the more the difficulty ramps — meteors fall faster and in
-greater numbers. A persistent best score, saved in the browser, gives every run
-a goal. The fantasy is "stay alive in the storm," delivered with neon arcade
-juice rather than realism.
+## Features
+  - Endless hazard field
+  - Inertia-free crisp control
+  - Score by survival time
 
-## Core Loop
+## Visual Style (required — "modern, attractive, today's style, innovative")
+- Dark animated gradient background and ambient particles.
+- Glassmorphism HUD panels (blurred translucent cards).
+- Gradient title text (background-clip) and gradient buttons.
+- Glowing elements (canvas shadowBlur), smooth animations, cohesive palette.
+- No external assets or network requests.
 
-1. Ship rests near the bottom of the screen.
-2. Meteors spawn at the top and accelerate downward (with slight horizontal drift).
-3. Player steers left/right (keyboard, mouse, or touch) to avoid collisions.
-4. Score increases continuously with survival time; grazing a meteor (a near-miss)
-   awards a bonus and a screen shake.
-5. On collision the ship explodes, the run ends, and the best score is updated.
+## Technical constraints
+- Vanilla JavaScript (ES2020+), single IIFE module, requestAnimationFrame loop.
+- No frameworks, no CDN, no libraries, no build step. Fully offline/self-contained.
 
-## Controls
-
-- Left / Right: Arrow keys or A/D.
-- Steering: mouse or touch (ship eases toward the pointer).
-- Start / Restart: Space or Enter, or the on-screen button.
-
-## Mechanics & Difficulty
-
-- **Endless:** no win state; the run ends only on a hit.
-- **Ramp:** spawn interval shrinks and meteor speed grows with elapsed time, so
-  early game is calm and late game is frantic.
-- **Near-miss:** passing within a small buffer of a meteor without contact grants
-  bonus points and feedback, rewarding bold play.
-- **Best score:** stored in `localStorage` and shown in the HUD and on game over.
-
-## Visual Direction
-
-- Dark, animated starfield gradient background (CSS layers + canvas particle stars).
-- Glassmorphism HUD panels using `backdrop-filter: blur` and translucent borders.
-- Gradient title and buttons (cyan → violet → pink).
-- Glowing ship and meteors via canvas `shadowBlur`; particle engine trails,
-  explosion bursts, and a screen-shake feedback system.
-- Cohesive neon palette: cyan #22d3ee, violet #a855f7, pink #f472b6 on near-black.
-- Fully self-contained: no external images, fonts, or network requests.
-
-## Technical Constraints
-
-- Vanilla ES2020 JavaScript wrapped in an IIFE.
-- Single `requestAnimationFrame` loop with delta-time updates.
-- HTML5 `<canvas>` rendering; responsive to window size with devicePixelRatio scaling.
-- No frameworks, libraries, build step, or CDN.
-- Best score persisted via `localStorage` (guarded for private-mode failures).
-
-## Success Criteria
-
-- Fully playable and bug-free in a modern browser.
-- Smooth difficulty curve that stays fair and readable.
-- Best score correctly persists across sessions.
-- Attractive, modern presentation that matches the neon/glassmorphism brief.
+## Files
+`index.html`, `style.css`, `game.js`, `assets/images/.gitkeep`, `assets/sounds/.gitkeep`, `README.md`, `README_fa.md`, `LICENSE`, `Prompt`, `package.json`, `.github/workflows/deploy.yml`.

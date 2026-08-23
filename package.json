@@ -1,7 +1,7 @@
 {
   "name": "html5-game-space-dodger",
   "version": "1.0.0",
-  "description": "🚀 Space Dodger — a modern, dependency-free HTML5 game built with Canvas and vanilla JavaScript.",
+  "description": "\ud83d\ude80 Space Dodger \u2014 a modern, dependency-free HTML5 game built with Canvas and vanilla JavaScript.",
   "main": "index.html",
   "scripts": {
     "start": "npx serve ."

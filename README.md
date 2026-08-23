@@ -1,32 +1,28 @@
 # 🚀 Space Dodger
 
-A fast, neon-soaked arcade survival game where you pilot a glowing ship through an endless meteor storm.
+🚀 Space Dodger — a modern, dependency-free HTML5 game built with Canvas and vanilla JavaScript.
 
 🎮 **Play Online:** https://gamelabz.github.io/html5-game-space-dodger/
 
 ## 📸 Screenshot
 
-![🚀 Space Dodger](assets/images/screenshot.png)
+![Space Dodger](assets/images/screenshot.png)
 
 ## 🎯 About
 
-**Space Dodger** is an endless arcade survival game built with pure HTML5 Canvas and vanilla JavaScript — no frameworks, no build step, no network requests. You command a sleek, glowing ship near the bottom of the screen and must weave through a relentless, procedurally generated meteor field. The longer you survive, the faster and denser the storm becomes, and your score climbs every second. Pull off near-misses for bonus points, chase your personal best, and watch the deep-space starfield drift behind glassmorphic HUD panels.
+Pilot your ship through an endless asteroid field, weaving past hazards to last as long as possible.
 
 ## 🕹️ Controls
 
-- **◀ / ▶ Arrow keys** or **A / D** — thrust the ship left and right.
-- **Mouse / Touch** — steer the ship by moving the pointer.
-- **Space / Enter** — start a run or restart after a crash.
+- Move: Arrow keys / WASD
+- Pause: P
+- Restart: R
 
 ## ✨ Features
 
-- **Endless gameplay** with a smooth, time-based difficulty ramp (faster + denser meteors).
-- **Procedural meteor field** — every run is unique, with rotating, irregular asteroids.
-- **Near-miss bonuses** — graze a meteor for extra points and a satisfying screen shake.
-- **Glassmorphism HUD** with live Score, Time, and Best readouts.
-- **Juicy visuals** — glowing ship & meteors, particle engine trails, explosion bursts, and a screen-shake feedback system.
-- **Persistent best score** saved to `localStorage`.
-- **Fully self-contained** — dark animated starfield, cohesive palette, zero external assets or fonts.
+- Endless hazard field
+- Inertia-free crisp control
+- Score by survival time
 
 ## 🚀 Run Locally
 
@@ -45,7 +41,7 @@ Then visit the printed URL (default `http://localhost:3000`).
 ## 🛠️ Tech Stack
 
 - HTML5 `<canvas>`
-- CSS3 (custom properties, flexbox, glassmorphism, `backdrop-filter`)
+- CSS3 (custom properties, flexbox, glassmorphism)
 - Vanilla JavaScript (ES2020, no frameworks)
 
 ## 🤝 Contributing
